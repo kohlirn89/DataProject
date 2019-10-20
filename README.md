@@ -37,7 +37,7 @@ Data Project
  
  Used SQLITE for database because loading for it is very fast and the creating docker image using it is faster. Since the data set used for the demo project was small hence sqlite was used, however it can be easily replaced with mysql or postgresql. 
  
- Run the following commands to run the project:
+ Clone the project and change to the vivid directory and then run the following command to start the project:
  
  ```docker-compose up```
  
