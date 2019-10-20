@@ -1,0 +1,25 @@
+version: '3'
+services:
+    db:
+        build: .
+        working_dir: /web/db
+        command: ./setup.py
+        volumes:
+            - .:/web
+    web:
+        build: .
+        ports:
+            - "5000:5000"
+        volumes:
+            - .:/web
+        links:
+          - db
+        environment:
+            - PORT:5000
+    load:
+        build: .
+        working_dir: /web/load
+        command: ./load.py
+        volumes:
+                - .:/web
+
