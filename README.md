@@ -51,7 +51,7 @@ Data Project
  
  - GET all events. URL for it http://0.0.0.0:5000/events 
  - GET all tickets for an event. The URL for it is http://0.0.0.0:5000/events/<event-id>/tickets, example url http://0.0.0.0:5000/events/164/tickets
- - GET best tickets for an event. The url for it is http://0.0.0.0:5000/events/<event-id>/tickets/best. Example URL for it http://0.0.0.0:5000/events/164/tickets/best
+ - GET best tickets for an event. The url for it is http://0.0.0.0:5000/events/<event-id>/tickets/best. Example URL for it http://0.0.0.0:5000/events/164/tickets/best . Best ticket is calculated based on the most expensive ticket for an event.
  - To post a ticket for seller, use curl command or a tool like POSTMAN, example command is curl -H "Content-type: application/json" -X POST http://127.0.0.1:5000/seller  -d '{"eventid":"107","id":"2","card":"11111","price":"200","sectionid":"90","rownumber":"RR","seatnumber":"2"}'
  - To update the ticket sell out use the curl or POSTMAN. Example command  curl -H "Content-type: application/json" -X PUT  http://127.0.0.1:5000/events/107/soldout  -d '{"sectionid":"203","rownumber":"8"}'
  
